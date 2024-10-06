@@ -16,7 +16,7 @@ ADD_CUSTOM_COMMAND(TARGET ${PROJECT_NAME} POST_BUILD
 
 ADD_CUSTOM_COMMAND(TARGET ${PROJECT_NAME} POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy
-                       ../src/haversine.hpp
+                       ../../src/haversine.hpp
                        ./include)
 
 enable_testing()
