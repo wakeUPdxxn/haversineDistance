@@ -19,7 +19,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 include(GoogleTest)
-include_directories(../${CMAKE_CURRENT_SOURCE_DIR}/src)
+include_directories(../${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(${PROJECT_NAME} SimpleTest.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE haversineDistance gtest gtest_main gmock gmock_main)

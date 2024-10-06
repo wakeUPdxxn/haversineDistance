@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../src/haversine.hpp"
+#include "../include/haversine.hpp"
 
 TEST(SimpleTest, RandomNumsTest) {
 	EXPECT_EQ(
