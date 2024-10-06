@@ -22,7 +22,7 @@ jobs:
       - name: Build sources and tests
         run: |
             chmod +x all_build.sh
-           ./all_build.sh
+            ./all_build.sh
            
   windows-all-build:
     runs-on: windows-latest
