@@ -1,5 +1,5 @@
 # haversineDistance
-lib for counting distance between to point by рaversine formula
+lib for counting distance between to point by haversine formula
 ## build:
 ./all_build.sh
 ## install:
