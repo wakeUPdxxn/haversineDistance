@@ -35,7 +35,7 @@ jobs:
 
     - name: Build sources and tests
       run: |
-           cmake -S . -B build/release -G "MinGW Makefiles" -D CMAKE_BUILD_TYPE=Release
+           cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
            cmake --build build/release
            
   ubuntu-test:
@@ -49,9 +49,7 @@ jobs:
       run: |
         cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
         cmake --build build/release
-        cd build/release/tests
-        chmod +x SimpleTest
-        ./SimpleTest
+        ./all_test.sh
            
   windows-test:
     runs-on: windows-latest
@@ -62,6 +60,6 @@ jobs:
       
     - name: Run tests
       run: |
-        cmake -S . -B build/release -G "MinGW Makefiles" -D CMAKE_BUILD_TYPE=Release
+        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
         cmake --build build/release
         ./all_test.sh
