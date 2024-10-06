@@ -1,0 +1,65 @@
+name: build and test
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+
+jobs:
+           
+  ubuntu-all-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckOut test
+        uses: actions/checkout@v4  
+          
+      - name: cmake-configure
+        uses: snickerbockers/cmake-configure@prerel1
+
+      - name: Build sources and tests
+        run: |
+           cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
+           cmake --build build/release
+           
+  windows-all-build:
+    runs-on: windows-latest
+    steps:
+    - name: CheckOut test
+      uses: actions/checkout@v4  
+          
+    - name: cmake-configure
+      uses: snickerbockers/cmake-configure@prerel1
+
+    - name: Build sources and tests
+      run: |
+           cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
+           cmake --build build/release
+           
+  ubuntu-test:
+    runs-on: ubuntu-latest
+    needs: ubuntu-all-build
+    steps:
+    - name: CheckOut test
+      uses: actions/checkout@v4  
+      
+    - name: Run tests
+      run: |
+        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
+        cmake --build build/release
+        ./all_test.sh
+           
+  windows-test:
+    runs-on: windows-latest
+    needs:  windows-all-build
+    steps:
+    - name: CheckOut test
+      uses: actions/checkout@v4  
+      
+    - name: Run tests
+      run: |
+        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
+        cmake --build build/release
+        ./all_test.sh
