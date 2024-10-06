@@ -21,8 +21,8 @@ jobs:
 
       - name: Build sources and tests
         run: |
-           cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
-           cmake --build build/release
+            chmod +x all_build.sh
+           ./all_build.sh
            
   windows-all-build:
     runs-on: windows-latest
@@ -35,8 +35,7 @@ jobs:
 
     - name: Build sources and tests
       run: |
-           cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
-           cmake --build build/release
+           ./all_build.sh
            
   ubuntu-test:
     runs-on: ubuntu-latest
@@ -47,8 +46,8 @@ jobs:
       
     - name: Run tests
       run: |
-        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
-        cmake --build build/release
+        chmod +x all_build.sh
+        ./all_build.sh
         chmod +x all_test.sh
         ./all_test.sh
            
@@ -61,6 +60,5 @@ jobs:
       
     - name: Run tests
       run: |
-        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
-        cmake --build build/release
+        ./all_build.sh
         ./all_test.sh
