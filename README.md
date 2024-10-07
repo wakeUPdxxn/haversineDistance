@@ -1,6 +1,6 @@
 [![build and test](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml/badge.svg)](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml)
 # haversineDistance
-lib for counting distance between to point by haversine formula. Requires c++20 
+lib for counting distance between two point by haversine formula. Requires c++20 
 ## build:
 ./all_build.sh
 ## test:
