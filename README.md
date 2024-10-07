@@ -1,3 +1,4 @@
+[![build and test](https://github.com/wakeUPdxxn/haversineDistance/actions/workflows/ciflow.yml/badge.svg?branch=master&event=status)](https://github.com/wakeUPdxxn/haversineDistance/actions/workflows/ciflow.yml)
 # haversineDistance
 lib for counting distance between to point by haversine formula
 ## build:
