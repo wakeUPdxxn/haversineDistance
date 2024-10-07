@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [[ "$OSTYPE" == "msys" ]]; 
 then
    cmake -S . -B build/release -G "MinGW Makefiles" -D CMAKE_BUILD_TYPE=Release
