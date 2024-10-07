@@ -4,15 +4,15 @@
 
 TEST(SimpleTest, RandomNumsTest) {
 	EXPECT_EQ(
-		float(6129.85938),
+		float(6129859.5),
 		float(haversineDistCount(65.83, 146.01, 39.37, 54.75))
 	);
 	EXPECT_EQ(
-		float(3764.26221),
+		float(3764262.25),
 		float(haversineDistCount(-12.765964, 94.897381, 14.227647, 115.521271))
 	);
 	EXPECT_EQ(
-		float(8160.07471),
+		float(8160074.5),
 		float(haversineDistCount(37.161179, 163.602411, 9.771900, 87.107417))
 	);
 }
