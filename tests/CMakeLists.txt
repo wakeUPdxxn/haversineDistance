@@ -22,7 +22,7 @@ include(GoogleTest)
 include_directories(../${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(${PROJECT_NAME} SimpleTest.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE haversineDistance gtest gtest_main gmock gmock_main)
+target_link_libraries(${PROJECT_NAME} PRIVATE haversineDistance gtest gtest_main)
 
 add_test(
 	NAME ${This}
