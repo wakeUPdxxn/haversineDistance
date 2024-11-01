@@ -1,11 +1,12 @@
 [![build and test](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml/badge.svg)](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml)
 # haversineDistance
-lib for counting distance between two point by haversine formula. Requires c++20 
-## build:
+Header-only for counting distance between two point by haversine formula. Requires c++20 
+## Not necessary steps:
+### build static lib and tests:
 ./all_build.sh
-## test:
+### run tests:
 ./all_test.sh
-## install:
+### to install compiled static version:
 ./install.sh
 ### if unix does not open scripts, try use before: sudo chmod +x <script full name>
 ### tested at ubuntu-latest and msys2
