@@ -7,13 +7,13 @@ concept isFloating = std::is_floating_point<T>::value == true;
 
 namespace Angle {
     template<isFloating T>
-    T toRad(T value) {
+    constexpr T toRad(T value) {
         return value * (std::numbers::pi / 180);
     }
 };
 
 template<isFloating D>
-D haversineDistCount(D lat1, D long1, D lat2, D long2)
+constexpr D haversineDistCount(D lat1, D long1, D lat2, D long2)
 {
     D R = D(6371);
 
@@ -29,7 +29,7 @@ D haversineDistCount(D lat1, D long1, D lat2, D long2)
         * pow(sin(long_delta / 2), 2);
 
     D c = 2 * atan2(sqrt(a), sqrt(1 - a));
-    D result = R * c * 1000; //meters
+    D result = R * c * 1000; 
 
     return result;
 }
