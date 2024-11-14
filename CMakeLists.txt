@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(HEADERS include/haversine.hpp)
 set(SRC src/haversine.cpp)
-set(-DCMAKE_INSTALL_PREFIX=${PROJECT_SOURCE_DIR})
 
 add_library(${PROJECT_NAME} STATIC ${SRC} ${HEADERS})
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER ${HEADERS})
