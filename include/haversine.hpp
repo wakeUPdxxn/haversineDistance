@@ -3,7 +3,7 @@
 #include <concepts>
 
 template<typename T>
-concept isFloating = std::is_floating_point<T>::value == true;
+concept isFloating = std::is_floating_point<T>::value;
 
 namespace Angle {
     template<isFloating T>
@@ -32,4 +32,4 @@ constexpr D haversineDistCount(D lat1, D long1, D lat2, D long2)
     D result = R * c * 1000; 
 
     return result;
-}
+} 
