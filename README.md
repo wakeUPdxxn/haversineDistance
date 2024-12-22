@@ -1,4 +1,4 @@
-[![build and test](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml/badge.svg)](https://github.com/wakeUPdxxn/byteReverse/actions/workflows/pipeline.yml)
+[![build and test](https://github.com/wakeUPdxxn/haversineDistance/actions/workflows/ciflow.yml/badge.svg)](https://github.com/wakeUPdxxn/haversineDistance/actions/workflows/ciflow.yml)
 # haversineDistance
 Header-only for counting distance between two point by haversine formula. Requires c++20 
 ## Not necessary steps:
